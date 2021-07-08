@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-12 col-lg-4">
+    <p-checkbox stroke="default">
+      Default
+    </p-checkbox>
+  </div>
+  <div class="col-12 col-lg-4">
+    <p-checkbox stroke="fill">
+      Fill
+    </p-checkbox>
+  </div>
+  <div class="col-12 col-lg-4">
+    <p-checkbox stroke="thick">
+      Thick
+    </p-checkbox>
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <div class="form-group">
+      <label for="selectStroke">Select Stroke:</label>
+      <select id="selectStroke" class="form-control" [(ngModel)]="selectedStroke">
+        <option *ngFor="let stroke of checkboxStrokes">
+          {{stroke}}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="col-12 col-lg-6">
+    <p-checkbox will-change [stroke]="selectedStroke">
+      {{selectedStroke}}
+    </p-checkbox>
+  </div>
+</div>
